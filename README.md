@@ -35,3 +35,4 @@ marp-themes   #marp用のスタイルシート
 # 参考
 - [本家Marp](https://marp.app/)
 - [Marpを Azure Static Web Appsサンプル](https://github.com/SakaITa/MarpToAzureStaticWebAppsSample)
+- [vscode-remote-try-node](https://github.com/Microsoft/vscode-remote-try-node)
