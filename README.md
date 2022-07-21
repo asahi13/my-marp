@@ -34,3 +34,4 @@ marp-themes   #marp用のスタイルシート
 
 # 参考
 - [本家Marp](https://marp.app/)
+- [Marpを Azure Static Web Appsサンプル](https://github.com/SakaITa/MarpToAzureStaticWebAppsSample)

@@ -7,11 +7,11 @@
   "scripts": {
     "dev": "marp --html --server .",
     "build_pdf": "marp --pdf ",
-    "build": "marp ",
+    "build": "marp",
     "postbuild": "cpx -C 'contents/img/**' dist/img"
   },
   "dependencies": {
-    "@marp-team/marp-cli": "^0.7.0",
+    "@marp-team/marp-cli": "^2.0.4",
     "cpx": "^1.5.0"
   },
   "marp": {
@@ -19,11 +19,9 @@
     "output": "./dist",
     "themeSet": "./marp-themes",
     "html": true,
-    "images": [
-      "png"
-    ],
-    "image": [
-      "png"
-    ]
+    "bespoke": {
+      "osc": true,
+      "progress": true
+    }
   }
 }
