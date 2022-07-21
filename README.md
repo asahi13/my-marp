@@ -18,18 +18,23 @@ yarn global add @marp-team/marp-cli
 
 # usage
 ```bash
+yarn install
 # html形式で出力
 yarn build
 # PDF形式で出力
 yarn build_pdf
+# デバッグ
+yarn dev
 ```
 # structure 
 ```bash
-contents      # プレゼンコンテンツ
-┗img          # プレゼンコンテンツ用の画像ファイル
-dest          # プレゼン資料出力先
-draws         # 画像作成用のワークスペース(drawio用)
-marp-themes   #marp用のスタイルシート
+.devcontainer        # GithubCodespace定義
+.github/workflows    # GithubActions CICD定義 AzureStaticWebAppsへのデプロイ
+contents             # プレゼンコンテンツ
+┗img                 # プレゼンコンテンツ用の画像ファイル
+dest                 # プレゼン資料出力先
+draws                # 画像作成用のワークスペース(drawio用)
+marp-themes          #marp用のスタイルシート
 ```
 
 # 参考
