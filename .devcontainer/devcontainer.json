@@ -1,5 +1,5 @@
-// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
-// https://github.com/microsoft/vscode-dev-containers/tree/v0.195.0/containers/java
+// For format details, see https://aka.ms/devcontainer.json. For config options, see the README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.238.1/containers/javascript-node
 {
 	"name": "Node.js",
 	"build": {
@@ -7,18 +7,18 @@
 		// Update 'VARIANT' to pick a Node version: 18, 16, 14.
 		// Append -bullseye or -buster to pin to an OS version.
 		// Use -bullseye variants on local arm64/Apple Silicon.
-		"args": { "VARIANT": "14-bullseye" }
+		"args": { "VARIANT": "14" }
 	},
-    // Configure tool-specific properties.
-    "customizations": {
-        // Configure properties specific to VS Code.
-        "vscode": {
-			// Set *default* container specific settings.json values on container create.
+
+	// Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
 			"settings": {
 				"markdown.marp.themes": ["./marp-themes/mystyle.css"]
 			},
-            // Add the IDs of extensions you want installed when the container is created.
-            "extensions": [
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
                 "dbaeumer.vscode-eslint",
                 // for languages
 				"ms-ceintl.vscode-language-pack-ja",
@@ -43,17 +43,16 @@
 				"vscode-icons-team.vscode-icons",
                 // marp
                 "marp-team.marp-vscode"
-            ]
-        }
-    },
-
+			]
+		}
+	},
 
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],
 
 	// Use 'postCreateCommand' to run commands after the container is created.
-	"postCreateCommand": "yarn install",
+	// "postCreateCommand": "yarn install",
 
-	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
-	"remoteUser": "vscode"
+	// Comment out to connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "node"
 }
