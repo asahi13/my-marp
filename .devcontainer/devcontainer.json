@@ -1,0 +1,59 @@
+// For format details, see https://aka.ms/vscode-remote/devcontainer.json or this file's README at:
+// https://github.com/microsoft/vscode-dev-containers/tree/v0.195.0/containers/java
+{
+	"name": "Node.js",
+	"build": {
+		"dockerfile": "Dockerfile",
+		// Update 'VARIANT' to pick a Node version: 18, 16, 14.
+		// Append -bullseye or -buster to pin to an OS version.
+		// Use -bullseye variants on local arm64/Apple Silicon.
+		"args": { "VARIANT": "14-bullseye" }
+	},
+    // Configure tool-specific properties.
+    "customizations": {
+        // Configure properties specific to VS Code.
+        "vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"markdown.marp.themes": ["./marp-themes/mystyle.css"]
+			},
+            // Add the IDs of extensions you want installed when the container is created.
+            "extensions": [
+                "dbaeumer.vscode-eslint",
+                // for languages
+				"ms-ceintl.vscode-language-pack-ja",
+				"xabikos.javascriptsni",
+				"redhat.vscode-yaml",
+				// for Log
+				"emilast.logfilehig",
+				"ibm.output-colorizer",
+				//for editor
+				"formulahendry.auto-close-tag",
+				"formulahendry.auto-rename-tag",
+				"wmaurer.change-case",
+				"anseki.vscode-color",
+				"grapecity.gc-excelviewer",
+				"ionutvmi.path-autocomplete",
+				"shardulm94.trailing-spaces",
+				// for diff
+				"l13rary.l13-diff",
+				// for Image
+				"mushan.vscode-paste-image",
+				// for VSCode
+				"vscode-icons-team.vscode-icons",
+                // marp
+                "marp-team.marp-vscode"
+            ]
+        }
+    },
+
+
+	// Use 'forwardPorts' to make a list of ports inside the container available locally.
+	// "forwardPorts": [],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	"postCreateCommand": "node -v",
+
+	// Uncomment to connect as a non-root user. See https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "vscode"
+}
