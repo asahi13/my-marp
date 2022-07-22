@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "dev": "marp --html --server .",
-    "build_pdf": "marp --pdf ",
+    "build_pdf": "marp --pdf --allow-local-files",
     "build": "marp",
     "postbuild": "cpx -C 'contents/img/**' dist/img"
   },
